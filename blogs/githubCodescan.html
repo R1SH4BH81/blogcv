@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GitHub's Code Scanning Autofix</title>
+    <style>
+      /* Variable Declarations */
+      :root {
+        --gutter-big: 2.618em;
+        --gutter: 1.618em;
+        --accent-color-1: dodgerblue;
+        --accent-color-2: tomato;
+      }
+
+      /* Global Styles */
+      body {
+        font-family: "Space Mono", monospace;
+        font-size: 18px;
+        color: #ffffff;
+        background-color: black;
+      }
+
+      /* Main Container */
+      main {
+        max-width: 30em;
+        margin: 0 auto;
+        padding: var(--gutter-big) var(--gutter);
+      }
+
+      /* Header Styles */
+      header {
+        margin-bottom: var(--gutter-big);
+      }
+
+      /* Main Header */
+      .header--main {
+        font-size: 2.236em;
+        font-weight: 700;
+      }
+
+      /* Sub Header */
+      .header--sub {
+        font-size: 1em;
+      }
+
+      /* Text Styles */
+      .text {
+        line-height: 1.4em;
+        margin-bottom: var(--gutter);
+      }
+
+      /* Code Styling */
+      .code {
+        background-color: #ffffff2c;
+        color: var(--accent-color-1);
+        border-radius: 0.1em;
+        padding-left: 0.25em;
+        padding-right: 0.25em;
+        margin-right: 10px;
+      }
+
+      /* Example Container */
+      .example {
+        background-color: #000000c1;
+        padding: var(--gutter);
+        border-radius: 1em;
+        margin-bottom: var(--gutter);
+        color: #ddd;
+        border: 1px solid white;
+      }
+
+      /* Example Text Styles */
+      .example .text {
+        margin-bottom: 0;
+      }
+
+      /* Inline Image Styling */
+      .image--inline {
+        float: left;
+        background-color: hsla(0, 0%, 100%, 0.045);
+        border-left: 0.5em solid var(--accent-color-2);
+        width: 70%;
+        
+        padding: 1em;
+        margin-top: 0.5em;
+        margin-right: 0.5em;
+        margin-bottom: 0.5em;
+        border-radius: 0.1em;
+        text-align: center;
+      }
+
+      /* Inline Quote Styling */
+      .quote--inline {
+        float: right;
+        background-color: hsla(9, 100%, 75%, 0.018);
+        border-left: 0.5em solid var(--accent-color-1);
+        width: 33%;
+        padding: var(--gutter);
+        margin-top: 0.5em;
+        margin-left: 0.5em;
+        margin-bottom: 0.5em;
+        border-radius: 0.1em;
+      }
+      .quote--left {
+        float: left;
+        background-color: hsla(0, 0%, 100%, 0.08);
+        border-left: 0.5em solid var(--accent-color-2);
+        width: 60%;
+        padding: 0.7em;
+        margin-top: 0.5em;
+        margin-right: 0.5em;
+        margin-bottom: 0.5em;
+        border-radius: 0.5em;
+      }
+      a {
+        text-decoration: none;
+        color: white;
+      }
+      .quote--right {
+        float: right;
+        background-color: hsla(0, 0%, 100%, 0.039);
+        border-left: 0.5em solid var(--accent-color-1);
+        width: 75%;
+        padding: var(--gutter);
+        margin-top: 0.5em;
+        margin-left: 0.5em;
+        margin-bottom: 0.5em;
+        border-radius: 0.5em;
+      }
+      .quote {
+        background-color: hsla(0, 0%, 100%, 0.053);
+        border-left: 0.5em solid var(--accent-color-1);
+
+        padding: var(--gutter);
+        margin-top: 0.5em;
+        margin-left: 0.5em;
+        margin-bottom: 0.5em;
+        border-radius: 0.5em;
+      }
+      .quote2 {
+        background-color: hsla(0, 0%, 100%, 0.075);
+        border-left: 0.5em solid var(--accent-color-2);
+
+        padding: 1em;
+        margin-top: 0.5em;
+        margin-right: 0.5em;
+        margin-bottom: 0.5em;
+        border-radius: 0.3em;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="../index.html"
+      ><img
+        style="height: 30px; margin-top: 5px; margin-left: 10px; float: left"
+        src="../assets/images/home.png"
+        class="social"
+    /></a>
+    <a href="../submit_blog.html"
+      ><img
+        style="height: 30px; margin-top: 5px; margin-left: 10px; float: left"
+        src="../assets/images/blog.png"
+        title="write your own blog"
+        class="social"
+    /></a>
+    <a href="https://www.instagram.com/eighty_one___"
+      ><img
+        style="height: 30px; margin-top: 5px; margin-left: 10px; float: right"
+        src="../assets/images/insta.png"
+        class="social"
+    /></a>
+    <a href="https://www.linkedin.com/in/r1shabh81"
+      ><img
+        style="height: 30px; margin-top: 5px; margin-left: 10px; float: right"
+        src="../assets/images/linkedIn.png"
+        class="social"
+    /></a>
+
+    <main>
+      <header><article id="article-content">
+        <h5 class="header--main">GitHub's Code Scanning Autofix</h5>
+        <h6 class="header--sub" style="margin-top: -30px">
+          Revolutionizing Application Security
+        </h6>
+        <h4><p id="read-time"></p></h4>
+        
+
+        <h6 class="header--sub">
+          <span class="code" style="float: left">22-03-24</span>
+        </h6>
+      </header>
+
+      <p class="text">
+        The introduction of Copilot-powered code scanning autofix represents a transformative stride in application security, harnessing the capabilities of GitHub Copilot and CodeQL. Covering a wide array of alert types across JavaScript, TypeScript, Java, and Python, this feature offers actionable code suggestions that efficiently address over two-thirds of identified vulnerabilities, often requiring minimal editing.
+      </p>
+     
+
+      <p class="text">
+        <b>Eric Tooley</b>, GitHub's senior product marketing manager, emphasizes the significance of prioritizing the developer experience within GitHub Advanced Security. This emphasis has resulted in remarkable remediation speed, outpacing traditional security tools by a factor of 7. With code scanning autofix, developers can now significantly reduce the time and effort spent on remediation tasks, marking a significant leap forward in security protocol efficiency.
+      </p>
+
+   
+
+      <p class="text">
+        As organizations confront the ever-looming threat of application vulnerabilities, the implementation of code scanning autofix emerges as a critical measure to mitigate risks proactively. By empowering developers to address vulnerabilities in real-time as they code, this feature helps curtail the accumulation of unremediated vulnerabilities, thereby preventing the exponential growth of "application security debt."
+      </p>
+      
+      <p class="text">
+        Much like GitHub Copilot streamlines development workflows by automating repetitive tasks, code scanning autofix streamlines the remediation process, enabling development teams to reclaim valuable time previously allocated to manual fixes. Moreover, by reducing the influx of routine vulnerabilities, security teams can refocus their efforts on implementing robust protective measures and keeping pace with the accelerated development cycle.
+      </p>
+      
+      <p class="text">
+        Code scanning autofix ensures developers receive clear, comprehensible suggestions alongside code previews, facilitating swift decision-making regarding acceptance, modification, or dismissal of proposed fixes. Leveraging the CodeQL engine and GitHub Copilot APIs, this feature combines heuristic analysis to provide accurate and contextually relevant code suggestions.
+
+      </p>
+      <p class="text">
+        GitHub's commitment to advancing application security extends further with plans to expand language support, with C# and Go slated for future integration. Developers are encouraged to participate in feedback discussions to contribute insights and shape ongoing enhancements, underscoring GitHub's dedication to fostering a collaborative and secure development ecosystem.
+
+      </p>
+
+
+
+      <!--<p class="text">
+        If you're looking to create a responsive multi-column page layout,
+        consider flexbox or grid. If you're looking to spice up blocks of text
+        with images or quotes, consider floats!
+      </p>--> </article>
+      <script src="\assets\js\readTime.js"></script>
+      
+
+      <div class="footer">
+        <marquee
+          behavior=""
+          direction=""
+          style="
+            border-radius: 1em;
+            height: 35px;
+            margin-bottom: -25px;
+            margin-top: 50px;
+            align-items: center;
+            justify-content: center;
+            padding-top: 10px;
+          "
+          >More Articles | <a href="mediatek.html">The Power Duo</a> |<a
+            href="apple.html"
+          >
+            More Article : <a href="aiChips.html">Apple Warns iPhone User</a> |
+          <a href="aiChips.html">Nvidia AI Chips</a> |
+          <a href="nueralNet.html">Nueral Network</a> |
+          <a href="EnglishAsCoding.html">English as universal Coding Language</a> |
+          <a href="githubCodescan.html">GitHub's Code Scanning Autofix</a> |
+          <a href="epicGames.html">Unreal Engine 5</a> |
+          <a href="matrix.html">Matrix</a> |
+          <a href="blockChain">Understanding BlockChain</a> |
+          <a href="mediatek.html">The Powerful Duo</a> |
+          <a href="flutter.html">Flutter</a>
+        </marquee>
+       
+      </div>
+    </main>
+  </body>
+</html>

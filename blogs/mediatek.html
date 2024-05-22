@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Power Duo: NVIDIA and MediaTek</title>
+    <style>
+      /* Variable Declarations */
+      :root {
+        --gutter-big: 2.618em;
+        --gutter: 1.618em;
+        --accent-color-1: dodgerblue;
+        --accent-color-2: tomato;
+      }
+
+      /* Global Styles */
+      body {
+        font-family: "Space Mono", monospace;
+        font-size: 18px;
+        color: #ffffff;
+        background-color: black;
+      }
+
+      /* Main Container */
+      main {
+        max-width: 30em;
+        margin: 0 auto;
+        padding: var(--gutter-big) var(--gutter);
+      }
+
+      /* Header Styles */
+      header {
+        margin-bottom: var(--gutter-big);
+      }
+
+      /* Main Header */
+      .header--main {
+        font-size: 2.236em;
+        font-weight: 700;
+      }
+
+      /* Sub Header */
+      .header--sub {
+        font-size: 1em;
+      }
+
+      /* Text Styles */
+      .text {
+        line-height: 1.4em;
+        margin-bottom: var(--gutter);
+      }
+
+      /* Code Styling */
+      .code {
+        background-color: #ffffff2c;
+        color: var(--accent-color-1);
+        border-radius: 0.1em;
+        padding-left: 0.25em;
+        padding-right: 0.25em;
+        margin-right: 10px;
+      }
+
+      /* Example Container */
+      .example {
+        background-color: #000000c1;
+        padding: var(--gutter);
+        border-radius: 1em;
+        margin-bottom: var(--gutter);
+        color: #ddd;
+        border: 1px solid white;
+      }
+
+      /* Example Text Styles */
+      .example .text {
+        margin-bottom: 0;
+      }
+
+      /* Inline Image Styling */
+      .image--inline {
+        float: left;
+        background-color: hsla(0, 0%, 100%, 0.046);
+        border-left: 0.5em solid var(--accent-color-2);
+        width: 70%;
+        
+        padding: 1em;
+        margin-top: 0.5em;
+        margin-right: 0.5em;
+        margin-bottom: 0.5em;
+        border-radius: 0.1em;
+      }
+
+      /* Inline Quote Styling */
+      .quote--inline {
+        float: right;
+        background-color: hsla(9, 100%, 75%, 0.018);
+        border-left: 0.5em solid var(--accent-color-1);
+        width: 33%;
+        padding: var(--gutter);
+        margin-top: 0.5em;
+        margin-left: 0.5em;
+        margin-bottom: 0.5em;
+        border-radius: 0.1em;
+      }
+      .quote--left {
+        float: left;
+        background-color: hsla(0, 0%, 100%, 0.08);
+        border-left: 0.5em solid var(--accent-color-2);
+        width: 60%;
+        padding: 0.7em;
+        margin-top: 0.5em;
+        margin-right: 0.5em;
+        margin-bottom: 0.5em;
+        border-radius: 0.5em;
+      }
+
+      .quote--right {
+        float: right;
+        background-color: hsla(0, 0%, 100%, 0.039);
+        border-left: 0.5em solid var(--accent-color-1);
+        width: 65%;
+        padding: var(--gutter);
+        margin-top: 0.5em;
+        margin-left: 0.5em;
+        margin-bottom: 0.5em;
+        border-radius: 0.5em;
+      }
+      .quote--left0 {
+        float: left;
+        background-color: hsla(0, 0%, 100%, 0.039);
+        border-left: 0.5em solid var(--accent-color-1);
+        width: 75%;
+        padding: var(--gutter);
+        margin-top: 0.5em;
+        margin-left: 0.5em;
+        margin-bottom: 0.5em;
+        border-radius: 0.5em;
+      }
+      a{text-decoration: none;
+      color:white}
+      .quote {
+        background-color: hsla(0, 0%, 100%, 0.053);
+        border-left: 0.5em solid var(--accent-color-1);
+
+        padding: var(--gutter);
+        margin-top: 0.5em;
+        margin-left: 0.5em;
+        margin-bottom: 0.5em;
+        border-radius: 0.5em;
+      }
+      .quote2 {
+        background-color: hsla(0, 0%, 100%, 0.075);
+        border-left: 0.5em solid var(--accent-color-2);
+
+        padding: 1em;
+        margin-top: 0.5em;
+        margin-right: 0.5em;
+        margin-bottom: 0.5em;
+        border-radius: 0.3em;
+      }
+      
+      .social-banner{
+        background-color: rgba(255, 255, 255, 0.406);
+        margin-top: 20px;
+        height: 40px;
+        border-radius: 20px;
+      }
+
+     
+    </style>
+  </head>
+  <body><a href="../index.html"><img style="height: 30px; margin-top: 5px; margin-left: 10px; float: left;" src="../assets/images/home.png" class="social"></a>
+    <a href="../submit_blog.html"
+      ><img
+        style="height: 30px; margin-top: 5px; margin-left: 10px; float: left"
+        src="../assets/images/blog.png"
+        title="write your own blog"
+        class="social"
+    /></a>
+    <a href="https://www.instagram.com/eighty_one___"><img style="height: 30px; margin-top: 5px; margin-left: 10px; float: right;" src="../assets/images/insta.png" class="social"></a>
+<a href="https://www.linkedin.com/in/r1shabh81"><img style="height: 30px; margin-top: 5px; margin-left: 10px; float: right;" src="../assets/images/linkedIn.png" class="social"></a>
+
+    <main>
+      <header> <article id="article-content">
+        
+        <h5 class="header--main">The Power Duo: NVIDIA and MediaTek</h5>
+        <h4><p id="read-time"></p></h4>
+
+        <h6 class="header--sub">
+          <span class="code" style="float: left">26-03-24</span>
+        </h6>
+      </header>
+
+      <p class="text">
+        In the fast-paced world of mobile technology, innovation is the driving
+        force. Two industry giants, MediaTek and NVIDIA, have recently joined
+        hands to redefine what our smartphones can do. Let’s explore this
+        exciting partnership and its implications.
+      </p>
+      <div class="quote"><h3 class="header"><b>The Nexus of Expertise</b></h3></div>
+
+     
+      
+      <div ><h3 class="header"><b>MediaTek’s SoC Mastery</b></h3>
+        MediaTek, known for its prowess in creating System-on-Chips (SoCs), has been a key player in the mobile industry. Their chips power millions of smartphones worldwide, providing the backbone for everything from processing speed to connectivity.
+      </div>
+      <div ><h3 class="header"><b>NVIDIA’s Graphics Magic</b></h3>
+        Enter NVIDIA—the name synonymous with cutting-edge graphics and AI. Their GPUs (Graphics Processing Units) have revolutionized gaming, scientific simulations, and now, mobile devices. But this collaboration isn’t just about gaming—it’s about enhancing the overall smartphone experience.
+      </div>
+
+      <h3 class="header">
+        <b> Collaborative Vision</b>
+      </h3>
+      <p class="text"><h3 class="quote2"><b>1. AI Everywhere</b></h3>
+        MediaTek’s SoCs, infused with NVIDIA’s AI capabilities, promise smarter phones. Imagine your camera recognizing scenes, optimizing settings, and capturing stunning photos—all thanks to AI. From voice assistants to app recommendations, AI will be seamlessly integrated into our daily interactions.</p>
+        <p class="text"><h3 class="quote2"><b>2. Graphics Galore</b></h3>
+          NVIDIA’s GPU architecture brings visual splendor to our screens. Whether you’re streaming videos, playing games, or multitasking, expect smoother animations, vibrant colors, and lifelike graphics. The days of pixelated displays are numbered.</p>
+          <p class="text"><h3 class="quote2"><b>3. Lightning-Fast Performance</b></h3>
+            Together, MediaTek and NVIDIA are turbocharging performance. Apps will load faster, multitasking will be seamless, and battery life will improve. Say goodbye to lag and hello to fluid responsiveness..</p>
+     
+     
+      
+  
+      
+      
+        <h3 class="quote2">4. Gaming Nirvana</h3>
+      
+      <p class="text">Mobile gaming enthusiasts, rejoice! The collaboration aims to elevate gaming experiences. Expect console-quality graphics, immersive environments, and zero latency. Whether you’re battling foes or exploring virtual worlds, your phone will be your gaming haven.</p>
+
+      <!--<p class="text">
+        If you're looking to create a responsive multi-column page layout,
+        consider flexbox or grid. If you're looking to spice up blocks of text
+        with images or quotes, consider floats!
+      </p>-->
+      <h3 >The Road Ahead</h3>
+      <p class="text">As MediaTek and NVIDIA continue their joint journey, we can anticipate:
+        <div class="quote2">Flagship Phones:</div> The next wave of flagship smartphones will bear the fruits of this collaboration. Prepare for devices that redefine what’s possible.
+        <div class="quote2">Mid-Range Marvels:</div> Even mid-range phones will benefit. MediaTek’s Dimensity series, powered by NVIDIA, will bring premium features to the masses.
+        <div class="quote2">AI Ecosystem:</div> Beyond phones, this partnership could extend to smart home devices, wearables, and more. AI will permeate every facet of our digital lives.</p>
+
+        <div class="quote" style="text-align: center;">Conclusion</div>
+        <p class="text">The MediaTek-NVIDIA alliance isn’t just about hardware—it’s about unlocking new possibilities. Smarter phones, richer experiences, and a glimpse into the future await us. So, keep an eye on your pocket companion—it’s about to get a whole lot smarter! 📱🚀✨
+        </p>
+        </article>
+      <script src="\assets\js\readTime.js"></script>
+
+      <div class="footer">
+        <marquee
+          behavior=""
+          direction=""
+          style="
+            
+            border-radius: 1em;
+            height: 35px;
+            margin-bottom: -25px;
+            margin-top: 50px;
+            align-items: center;
+            justify-content: center;
+            padding-top: 10px;
+          "
+          > More Article : <a href="aiChips.html">Apple Warns iPhone User</a> |
+          <a href="aiChips.html">Nvidia AI Chips</a> |
+          <a href="nueralNet.html">Nueral Network</a> |
+          <a href="EnglishAsCoding.html">English as universal Coding Language</a> |
+          <a href="githubCodescan.html">GitHub's Code Scanning Autofix</a> |
+          <a href="epicGames.html">Unreal Engine 5</a> |
+          <a href="matrix.html">Matrix</a> |
+          <a href="blockChain">Understanding BlockChain</a> |
+          <a href="mediatek.html">The Powerful Duo</a> |
+          <a href="flutter.html">Flutter</a>
+        </marquee>
+        
+      </div>
+    </main>
+  </body>
+</html>

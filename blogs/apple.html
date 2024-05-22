@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* Variable Declarations */
+      :root {
+        --gutter-big: 2.618em;
+        --gutter: 1.618em;
+        --accent-color-1: dodgerblue;
+        --accent-color-2: tomato;
+      }
+
+      /* Global Styles */
+      body {
+        font-family: "Space Mono", monospace;
+        font-size: 18px;
+        color: #ffffff;
+        background-color: black;
+      }
+
+      /* Main Container */
+      main {
+        max-width: 30em;
+        margin: 0 auto;
+        padding: var(--gutter-big) var(--gutter);
+      }
+
+      /* Header Styles */
+      header {
+        margin-bottom: var(--gutter-big);
+      }
+
+      /* Main Header */
+      .header--main {
+        font-size: 2.236em;
+        font-weight: 700;
+      }
+
+      /* Sub Header */
+      .header--sub {
+        font-size: 1em;
+      }
+
+      /* Text Styles */
+      .text {
+        line-height: 1.4em;
+        margin-bottom: var(--gutter);
+      }
+
+      /* Code Styling */
+      .code {
+        background-color: #ffffff2c;
+        color: var(--accent-color-1);
+        border-radius: 0.1em;
+        padding-left: 0.25em;
+        padding-right: 0.25em;
+        margin-right: 10px;
+      }
+
+      /* Example Container */
+      .example {
+        background-color: #000000c1;
+        padding: var(--gutter);
+        border-radius: 1em;
+        margin-bottom: var(--gutter);
+        color: #ddd;
+        border: 1px solid white;
+      }
+
+      /* Example Text Styles */
+      .example .text {
+        margin-bottom: 0;
+      }
+
+      /* Inline Image Styling */
+      .image--inline {
+        float: left;
+        background-color: hsl(9, 100%, 75%);
+        border-left: 0.5em solid var(--accent-color-2);
+        width: 20%;
+        padding: 1em;
+        margin-top: 0.5em;
+        margin-right: 0.5em;
+        margin-bottom: 0.5em;
+        border-radius: 0.1em;
+      }
+
+      /* Inline Quote Styling */
+      .quote--inline {
+        float: right;
+        background-color: hsla(9, 100%, 75%, 0.018);
+        border-left: 0.5em solid var(--accent-color-1);
+        width: 33%;
+        padding: var(--gutter);
+        margin-top: 0.5em;
+        margin-left: 0.5em;
+        margin-bottom: 0.5em;
+        border-radius: 0.1em;
+      }
+      .quote--left {
+        float: left;
+        background-color: hsla(0, 0%, 100%, 0.08);
+        border-left: 0.5em solid var(--accent-color-2);
+        width: 60%;
+        padding: 0.7em;
+        margin-top: 0.5em;
+        margin-right: 0.5em;
+        margin-bottom: 0.5em;
+        border-radius: 0.5em;
+      }
+      a {
+        text-decoration: none;
+        color: white;
+      }
+      .quote--right {
+        float: right;
+        background-color: hsla(0, 0%, 100%, 0.039);
+        border-left: 0.5em solid var(--accent-color-1);
+        width: 75%;
+        padding: var(--gutter);
+        margin-top: 0.5em;
+        margin-left: 0.5em;
+        margin-bottom: 0.5em;
+        border-radius: 0.5em;
+      }
+      .quote {
+        background-color: hsla(0, 0%, 100%, 0.053);
+        border-left: 0.5em solid var(--accent-color-1);
+
+        padding: var(--gutter);
+        margin-top: 0.5em;
+        margin-left: 0.5em;
+        margin-bottom: 0.5em;
+        border-radius: 0.5em;
+      }
+      .quote2 {
+        background-color: hsla(0, 0%, 100%, 0.075);
+        border-left: 0.5em solid var(--accent-color-2);
+
+        padding: 1em;
+        margin-top: 0.5em;
+        margin-right: 0.5em;
+        margin-bottom: 0.5em;
+        border-radius: 0.3em;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="../index.html"
+      ><img
+        style="height: 30px; margin-top: 5px; margin-left: 10px; float: left"
+        src="../assets/images/home.png"
+        class="social"
+    /></a>
+    <a href="../submit_blog.html"
+      ><img
+        style="height: 30px; margin-top: 5px; margin-left: 10px; float: left"
+        src="../assets/images/blog.png"
+        title="write your own blog"
+        class="social"
+    /></a>
+    <a href="https://www.instagram.com/eighty_one___"
+      ><img
+        style="height: 30px; margin-top: 5px; margin-left: 10px; float: right"
+        src="../assets/images/insta.png"
+        class="social"
+    /></a>
+    <a href="https://www.linkedin.com/in/r1shabh81"
+      ><img
+        style="height: 30px; margin-top: 5px; margin-left: 10px; float: right"
+        src="../assets/images/linkedIn.png"
+        class="social"
+    /></a>
+
+    <main>
+      <header><article id="article-content">
+        <h5 class="header--main">
+          Apple Warns iPhone Users of Sophisticated Spyware Attacks
+        </h5>
+        <h4><p id="read-time"></p></h4>
+
+        <h6 class="header--sub">
+          <span class="code" style="float: left">13-04-24</span>
+        </h6>
+      </header>
+
+      <p class="text">
+        In recent times, Apple has been vigilant in notifying its iPhone users
+        about a specific type of threat: mercenary spyware attacks. These
+        warnings are distinct from common cyber threats and are aimed at
+        unauthorized access to a user’s device. Let’s delve into the details:
+      </p>
+      <h3 class="quote"><b>Understanding Spyware Threat Notifications</b></h3>
+
+      <p class="text">
+        Apple’s threat notifications are designed to inform and assist users who
+        may have been individually targeted by mercenary spyware attacks.
+      </p>
+      <p class="text">
+        These notifications serve as a crucial alert system, especially for
+        those who might be at risk due to their profession or activities.
+      </p>
+
+      <h3 class="quote">
+        <b> Mercenary Spyware Attacks: A Complex Threat</b>
+      </h3>
+      <p class="text">
+        Unlike typical cybercrime, mercenary spyware attacks are highly
+        sophisticated and resource intensive. Attackers focus on a very small
+        number of specific individuals and their devices.
+      </p>
+      <p class="text">
+        These attacks cost millions of dollars and are challenging to detect and
+        prevent. The extreme sophistication and global nature of these attacks
+        make them some of the most advanced digital threats today.
+      </p>
+      <h3 class="quote">
+        <b> Mercenary Spyware Attacks: A Complex Threat</b>
+      </h3>
+      <p class="text">
+        Historically, such attacks have been associated with state actors,
+        including private companies developing spyware on their behalf (such as
+        the infamous Pegasus from the NSO Group).
+      </p>
+      <p class="text">
+        The targets are often journalists, activists, politicians, and
+        diplomats.
+      </p>
+      <p class="text">
+        Since 2021, Apple has sent threat notifications to users in over 150
+        countries where these attacks have been detected.
+      </p>
+
+      <!--<p class="text">
+        If you're looking to create a responsive multi-column page layout,
+        consider flexbox or grid. If you're looking to spice up blocks of text
+        with images or quotes, consider floats!
+      </p>--></article>
+      <script src="\assets\js\readTime.js"></script>
+
+      <div class="footer">
+        <marquee
+          behavior=""
+          direction=""
+          style="
+            border-radius: 1em;
+            height: 35px;
+            margin-bottom: -25px;
+            margin-top: 50px;
+            align-items: center;
+            justify-content: center;
+            padding-top: 10px;
+          "
+          >  More Article : <a href="apple.html">Apple Warns iPhone User</a> |
+          <a href="aiChips.html">Nvidia AI Chips</a> |
+          <a href="nueralNet.html">Nueral Network</a> |
+          <a href="EnglishAsCoding.html">English as universal Coding Language</a> |
+          <a href="githubCodescan.html">GitHub's Code Scanning Autofix</a> |
+          <a href="epicGames.html">Unreal Engine 5</a> |
+          <a href="matrix.html">Matrix</a> |
+          <a href="blockChain">Understanding BlockChain</a> |
+          <a href="mediatek.html">The Powerful Duo</a> |
+          <a href="flutter.html">Flutter</a>
+          
+        </marquee>
+        
+        
+      </div>
+    </main>
+  </body>
+</html>
