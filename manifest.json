@@ -1,0 +1,20 @@
+{
+  "name": "8BIT BLOG",
+  "short_name": "8BIT BLOG",
+  "description": "A Blog Site related to reviews of latest tech happening and changes",
+  "start_url": "/index.html",
+  "display": "standalone",
+  
+  "icons": [
+    {
+      "src": "/assets/images/icon.ico",
+     "type": "image/x-icon"
+    },
+   
+    {
+      "src": "/assets/images/icon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
