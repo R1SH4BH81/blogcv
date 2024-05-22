@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Submit Your Blog</title>
+    <style>
+      body {
+        font-family:  'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 18px;
+        background-color: #000000;
+        color: white;
+      }
+      .form-container {
+        max-width: 600px;
+        margin: 0 auto;
+
+        padding: 20px;
+
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      .form-group {
+        margin-bottom: 15px;
+      }
+      .form-group label {
+        display: block;
+        margin-bottom: 5px;
+      }
+      .form-group input[type="text"] {
+        width: 99%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        align-items: center;
+        margin-left: -2%;
+        border-left: 0.3em solid dodgerblue;
+      }
+      .form-group textarea {
+        width: 99%;
+        height:550px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        align-items: center;
+        margin-left: -2%;
+        resize: vertical;
+        border-left: 0.3em solid rgb(241, 149, 69);
+      }
+
+      .form-group input[type="email"] {
+        width: 60%;
+        padding: 10px;
+        border: 1px solid #ccc;
+         height: 25px;
+        border-radius: 25px;
+        margin-left: 7%;
+      }
+      .form-group button {
+        padding: 10px 2px;
+        background-image: url("https://i.pinimg.com/originals/92/75/1e/92751e0ca5fb8b890839121c472df4f3.gif");
+        background-size: cover;
+        background-position: center;
+        color: white;
+        border: none;
+        border-radius: 25px;
+        font-size: 18px;
+        font-weight: bold;
+        width: 25%;
+        cursor: pointer;
+        border: 2px solid #ffffff65;
+        letter-spacing: 1px;
+      }
+      .form-group button:hover {
+      }
+      .error-message {
+        color: red;
+        margin-top: 10px;
+        display: none;
+      }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.6.4/dist/email.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("cT0I9fydyaMua-p7C");
+      })();
+    </script>
+  </head>
+  <body>
+    <a href="../index.html"
+      ><img
+        style="height: 30px; margin-top: 5px; margin-left: 10px; float: left"
+        src="../assets/images/home.png"
+        class="social"
+    /></a>
+    <div class="form-container">
+      <h3 style="text-align: center; margin-top: -5px">Submit Your Blog</h3>
+      
+      <form id="blogForm">
+        <div class="form-group">
+          <label for="blog_heading"></label>
+          <input
+            type="text"
+            id="blog_heading"
+            name="blog_heading"
+            placeholder="Enter Heading"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="blog_content"></label>
+          <textarea
+            id="blog_content"
+            name="blog_content"
+            rows="10"
+            required
+            placeholder="Enter Blog Content "
+          ></textarea>
+        </div>
+        <div class="form-group">
+          <label for="email"
+            ><p class="error-message" id="error-message">
+              Please enter a valid email address.
+            </p></label
+          >
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="eMail Adress"
+            required
+          />
+          <button type="submit">Submit</button>
+        </div>
+      </form>
+    </div>
+    <script type="text/javascript">
+      document
+        .getElementById("blogForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          const formData = new FormData(this);
+          const email = formData.get("email");
+          const blog_heading = formData.get("blog_heading");
+          const blog_content = formData.get("blog_content");
+
+          // Email validation
+          const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          if (!email || !emailRegex.test(email)) {
+            document.getElementById("error-message").style.display = "block";
+            return;
+          } else {
+            document.getElementById("error-message").style.display = "none";
+          }
+
+          // Send email using EmailJS
+          emailjs
+            .send("service_cghdf0l", "template_fxsoncw", {
+              email: email,
+              blog_heading: blog_heading,
+              blog_content: blog_content,
+            })
+            .then(
+              function (response) {
+                Swal.fire({
+                  title: "Success!",
+                  text: "Your blog has been submitted for review",
+                  icon: "success",
+                  confirmButtonText: "nice",
+                });
+              },
+              function (error) {
+                Swal.fire({
+                  title: "Error!",
+                  text: "There was an error submitting your blog. Please try again.",
+                  icon: "error",
+                  confirmButtonText: "oh no",
+                });
+              }
+            );
+        });
+    </script>
+  </body>
+</html>
