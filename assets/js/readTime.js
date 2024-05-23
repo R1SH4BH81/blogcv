@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("article-content").innerText;
 
   // Average reading speed (words per minute)
-  var wordsPerMinute = 170;
+  var wordsPerMinute = 200;
 
   // Calculate the read time
   var words = articleContent.split(/\s+/).length;
