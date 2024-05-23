@@ -1163,7 +1163,8 @@
           </div>
         </section>
       </article>
-    </main>
+    </main><p id="totalViews"></p>
+
 
     <!-- 
     - #FOOTER
@@ -1220,5 +1221,61 @@
       });
     });
   </script>
+    <script>
+      // Function to initialize the view counter
+function initializeViewCounter() {
+    // Check if the view counter exists in localStorage
+    if (!localStorage.getItem('viewCount')) {
+        // If it doesn't exist, set it to 0
+        localStorage.setItem('viewCount', 0);
+    }
+}
+
+// Function to update the view counter
+function updateViewCounter() {
+    // Get the current view count from localStorage
+    var viewCount = parseInt(localStorage.getItem('viewCount'));
+
+    // Increment the view count by 1
+    viewCount++;
+
+    // Update the view count in localStorage
+    localStorage.setItem('viewCount', viewCount);
+
+    // Return the updated view count
+    return viewCount;
+}
+
+// Function to display total views using <p> tag
+function displayTotalViews() {
+    // Get the updated view count
+    var totalViews = parseInt(localStorage.getItem('viewCount'));
+
+    // Get the <p> element with id 'totalViews'
+    var totalViewsElement = document.getElementById('totalViews');
+
+    // Update the inner text of the <p> element
+    totalViewsElement.innerText = 'Total views: ' + totalViews;
+}
+
+// Function to handle key press event
+function handleKeyPress(event) {
+    // Check if Shift and T keys are pressed simultaneously
+    if (event.shiftKey && event.key === 'T') {
+        // Call displayTotalViews function to show total views
+        displayTotalViews();
+    }
+}
+
+// Call initializeViewCounter function when the page loads
+initializeViewCounter();
+
+// Add event listener for key press events
+document.addEventListener('keypress', handleKeyPress);
+
+// Call updateViewCounter function to increment view count on page load
+updateViewCounter();
+
+    </script>
   </body>
 </html>
